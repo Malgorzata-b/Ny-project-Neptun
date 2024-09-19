@@ -1,0 +1,309 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Kalnia;
+}
+
+/* Smooth scrolling has been added to the entire page.
+   This allows smooth transitions when navigating between 
+   different sections of the page. */
+/* Jevn rulling er lagt til på hele siden.
+   Dette gjør det mulig med jevne overganger når du navigerer
+    mellom ulike seksjoner på siden. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* This CSS styling applies to the <body> element:
+     - Sets the height to 100% of the viewport (100vh).
+     - Limits the maximum width to 1400px to ensure the c
+     ontent doesn't stretch too wide.
+     - Uses a flexbox layout to organize child elements vertically.
+      */
+/* Denne CSS-stylingen gjelder for <body>-elementet:
+     - Setter høyden til 100% av visningshøyden (100vh).
+     - Begrenser maksimal bredde til 1400px for å sikre at 
+     innholdet ikke strekkes for bredt.
+     - Bruker flexbox-layout for å organisere underordnede elementer vertikalt.
+  */
+body {
+  /* height: 100%;
+    width: 100%; */
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+/* This CSS rule applies to the <header> element:
+     - Sets the display property to 'inline-block',
+      allowing the header to behave like an inline element
+       while still allowing block-level styling (e.g., width, height). */
+header {
+  display: inline-block;
+}
+
+/* Defines a set of custom CSS variables for colors used 
+throughout the stylesheet */
+/* Definerer et sett med egendefinerte CSS-variabler for 
+farger som brukes gjennom hele stilarket */
+
+:root {
+  --white: white;
+  --black: rgba(16, 96, 248, 0.38);
+  --lightcolor: #f2f2f2;
+  --darkpurple: rgb(9, 4, 24);
+  --verydarkpurple: rgb(13, 3, 45);
+  --purple: rgb(39, 36, 49);
+  --button-background: rgb(156, 156, 171);
+  --button-background-image: rgb(52, 52, 72);
+  --Neptune-text: rgb(228, 217, 172);
+  --lightblue: /*rgba(92, 152, 249, 0.25); */ rgba(2, 20, 67, 0.75);
+}
+
+.Section-container {
+  display: flex;
+  background-color: var(--black);
+  height: 100vh;
+}
+
+/* Styles the text with a specific font size, family, and color, 
+and sets its position to relative */
+/* Stiler teksten med en spesifikk skriftstørrelse, skrifttype 
+og farge, og setter posisjonen til relativ */
+#Link {
+  font-size: 24px;
+  color: var(--white);
+  position: relative;
+}
+/* background-color: var(--orange); */
+#Title {
+  padding-left: 0px;
+  margin-top: 700px;
+  font-size: 80px;
+  font-weight: normal;
+  color: var(--white);
+}
+
+#Meny {
+  display: flex;
+  margin-left: 1100px;
+  /* padding-left: 1000px; */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* Styles the navigation bar with a static position, hides overflow, 
+sets background color, and uses flexbox layout */
+/* Stiler navigasjonsfeltet med en statisk posisjon, skjuler overløp, 
+setter bakgrunnsfarge og bruker flexbox-layout */
+.Navbar {
+  top: 0;
+  position: static;
+  overflow: hidden;
+  /* background-color: var(--black); */
+  display: flex;
+  cursor: pointer;
+}
+
+/* Styles the navigation links with block display, sets text color, 
+alignment, padding, and font size */
+/* Stiler navigasjonslinkene med blokkvisning, setter tekstfarge, 
+justering, padding og skriftstørrelse */
+.Navbar a {
+  display: block;
+  color: var(--button-background);
+  text-align: center;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Changes the background color when the link is hovered over. */
+/* Endrer bakgrunnsfargen når lenken er over. */
+.Navbar a:hover {
+  color: var(--black);
+  background-color: var(--white);
+  border-radius: 20px;
+}
+/* Styles the fixed background image with no repeat, 
+centered position, cover size, and fixed attachment */
+/* Stiler bakgrunnsbildet med ingen gjentakelse, senterposisjon,
+ dekkstørrelse og fast vedlegg */
+#fixed-bilde {
+  background-image: url(Images/npt4.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Section-container-2 {
+  /* height: 100vh; */
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  height: 700px;
+  /* border: 2px solid red; */
+}
+
+#text {
+  font-size: 40px;
+  color: var(--white);
+  padding-right: 150px;
+}
+/* Styles the gallery container with flexbox layout, aligns content to 
+the right and center, adds margins, sets height to full viewport height, 
+and applies a black background */
+/* Stiler galleri-containeren med flexbox-layout, justerer innholdet til 
+høyre og sentrum, legger til marger, setter høyden til full visningshøyde 
+og bruker svart bakgrunnsfarge */
+#Bildegalleri {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 220px;
+  background-color: var(--black);
+  height: 700px;
+}
+
+/* Styles the carousel container with a flexbox layout in a column direction, 
+sets a black background, adds padding, rounded corners, and a shadow effect */
+/* Stiler karusellbeholderen med flexbox-layout i kolonne-retning, setter 
+svart bakgrunn, legger til padding, avrundede hjørner og en skyggeeffekt */
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--black);
+  margin: 20px 100px 20px 0px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px var(--verydarkpurple);
+}
+
+/* Styles the photo container with fixed dimensions, rounded corners,
+ flexbox layout, and smooth scrolling behavior */
+/* Stiler foto-beholderen med faste dimensjoner, avrundede hjørner, 
+flexbox-layout og jevn rulleopplevelse */
+.photo-container {
+  width: 700px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Styles the button container with a flexbox layout, centers buttons 
+horizontally, sets background color, and specifies dimensions */
+/* Stiler knappbeholderen med flexbox-layout, sentrering av knapper 
+horisontalt, setter bakgrunnsfarge og spesifiserer dimensjoner */
+.button-container {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(1, 18, 60, 0);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 40px;
+  width: 700px;
+}
+
+/* Styles individual buttons with specific dimensions, margin, 
+rounded corners, shadow effects, and gradient background */
+/* Stiler individuelle knapper med spesifikke dimensjoner, marg, 
+avrundede hjørner, skyggeeffekter og gradientbakgrunn */
+.button {
+  width: 20px;
+  height: 20px;
+  margin: 10px 5px 0 5px;
+  border-radius: 20px;
+  box-shadow: 0 1px 5px var(--darkpurple),
+    inset 1px 1px 2px var(--verydarkpurple);
+  background-color: var(--button-background);
+  background-image: linear-gradient(
+    var(--button-background),
+    var(--button-background-image)
+  );
+}
+
+/* Styling the container as a flexible element (flexbox) that arranges children
+ in a row and centers them horizontally and vertically. Additionally, 
+ a gap of 80px is set between elements and a left margin of 10px. */
+
+/* Stiler containeren som et fleksibelt element (flexbox), 
+som plasserer barna i en rad (row) og sentrerer dem horisontalt og vertikalt. 
+I tillegg er det satt en avstand mellom 
+elementene (gap) på 80px og en venstremarg på 10px. */
+
+.Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-left: 10px;
+}
+
+/* Style definitions for three elements: textbox-1, Neptune-bilde-1,
+ and textbox-2.
+   - #textbox-1 and #textbox-2 use a flex layout with column 
+   direction, white text, and gaps between items.
+   - #Neptune-bilde-1 is an image with top margin, fixed height and width, 
+   rounded corners, and a shadow in very dark purple. */
+
+/* Stildefinisjoner for tre elementer: textbox-1, Neptune-bilde-1 og
+    textbox-2.
+   - #textbox-1 og #textbox-2 bruker flex-oppsett med kolonne, hvit tekst 
+   og avstand mellom elementer (gap).
+   - #Neptune-bilde-1 er et bilde med toppmarg, fast høyde og bredde, 
+   avrundede hjørner og skygge i veldig mørk lilla farge. */
+
+#textbox-1 {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  line-height: 1.6;
+  font-size: 1.5rem;
+  gap: 50px;
+  max-width: 700px;
+}
+
+#Neptune-bilde-1 {
+  margin-top: 100px;
+  height: 450px;
+  width: 800px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px var(--verydarkpurple);
+}
+
+#textbox-2 {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  line-height: 1.6;
+  font-size: 1.2rem;
+  gap: 30px;
+  max-width: 700px;
+}
+
+.Video {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px var(--verydarkpurple);
+}
+footer {
+  display: flex;
+  height: 50px;
+}
+
+#Home {
+  color: var(--white);
+  border: none;
+  text-decoration: none;
+  border: none;
+}
