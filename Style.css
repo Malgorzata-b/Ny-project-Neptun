@@ -289,6 +289,13 @@ elementene (gap) på 80px og en venstremarg på 10px. */
   gap: 30px;
   max-width: 700px;
 }
+#Neptune-bilde-2 {
+  margin-top: 80px;
+  height: 550px;
+  width: 900px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px var(--verydarkpurple);
+}
 
 .Video {
   margin-top: 100px;
